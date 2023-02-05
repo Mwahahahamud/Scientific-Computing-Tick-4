@@ -1,1 +1,0 @@
-# Scientific-Computing-Tick-4
