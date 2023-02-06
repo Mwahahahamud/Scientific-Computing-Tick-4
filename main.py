@@ -13,7 +13,7 @@ for compNum in range(width):
             allruns[taxNum + (width * compNum)].append(simulation(1 + (compNum / 100), taxNum / (width + 2)))
         print(allruns[taxNum + (width * compNum)])
 
-print(allruns)
+# print(allruns)
 
 
 def conNum(runDt):
@@ -88,7 +88,7 @@ for i in range(len(reds)):
 
 for count in range(width):
     for i in range(width):
-        plt.scatter([(i / (width + 2)) * 100], [1 + (count / 100)], color=((1 - (reds[i + (width * count)] / maxim)), (reds[i + (width * count)] / (maxim)) ** 0.5, conNums[i + (width * count)] / amountOfRuns))
+        plt.scatter([(i / (width + 2)) * 100], [1 + (count / 100)], color=((1 - (reds[i + (width * count)] / maxim)) ** 2, (reds[i + (width * count)] / (maxim)) ** 0.33, conNums[i + (width * count)] / amountOfRuns))
 
 x = [((z % width) * ((1 / (width + 2)) * 100)) for z in range(width * width)]
 
@@ -114,6 +114,4 @@ print(conNums)
 print(labels)
 
 plt.show()
-
-
 
